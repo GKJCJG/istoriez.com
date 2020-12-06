@@ -1,0 +1,208 @@
+@import '../../assets/scss/variables';
+
+.carouselcontainer {
+    transform: translateZ(0);
+}
+
+.scrollleft,
+.scrollright {
+    cursor: pointer;
+    border-radius: 50%;
+    top: 115px;
+    position: fixed;
+    z-index: 6;
+    padding: 10px;
+    background: white;
+    color: gray;
+    display: none;
+    box-shadow: 0 7px 15px rgba(0,0,0,.2);
+    border: 1px solid #dfe1e5;
+    visibility: visible;
+    opacity: 0.8;
+    transition: visibility 0.5s linear, opacity 0.5s linear, color 0.5s;
+
+    &:hover {
+        opacity: 1;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    i {
+        font-size: 30px;
+        vertical-align: sub;
+    }
+
+    @media (min-width: $layout-post-single-width) {
+        display: block;
+    }
+
+    &.invisible {
+        visibility: hidden;
+        opacity: 0 !important;
+    }
+}
+
+.scrollleft {
+    left: 10px;
+}
+
+.scrollright {
+    right: 10px;
+}
+
+.timestamp {
+    position: absolute;
+    border: 1px solid #d3d3d3;
+    bottom: -80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 3px 5px;
+    border-radius: 4px;
+    min-width: 140px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
+
+    @media (min-width: $large-story-breakpoint) {
+        bottom: -123px;
+        min-width: 150px;
+    }
+}
+
+:global(body.dark) {
+    .timestamp {
+        border: 1px solid #44475a;
+    }
+}
+
+.favoritecarousel {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    display: flex;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 115px;
+
+    @media (min-width: $large-story-breakpoint) {
+        padding-top: 50px;
+        padding-bottom: 165px;
+    }
+
+    &::-webkit-scrollbar {
+        /* WebKit */
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+    }
+
+    /* Enable Safari touch scrolling physics which is needed for scroll snap */
+    -webkit-overflow-scrolling: touch;
+
+    > :first-child {
+        margin-left: calc(50vw - 89px);
+
+        @media (min-width: $large-story-breakpoint) {
+            margin-left: calc(50vw - 125px);
+        }
+    }
+}
+
+.emptycontainer {
+    height: 231px;
+    position: relative;
+    text-align: center;
+
+    .message {
+        max-width: 70vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.loading {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.snap {
+    position: relative;
+
+    @media (min-width: $large-story-breakpoint) {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    margin-left: 30px;
+    margin-right: 30px;
+
+    a {
+        @media (min-width: 500px) {
+            -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(65%, transparent), to(rgba(255, 255, 255, 0.4)));
+        }
+    }
+}
+
+.intersecting {
+    transform: scale(1.25);
+    transition: all 200ms;
+
+    a {
+        box-shadow: 0px 18px 13px -6px rgba(0, 0, 0, 0.6);
+        transition: all 200ms;
+
+        @media (min-width: 500px) {
+            -webkit-box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(75%, transparent), to(rgba(255, 255, 255, 0.4)));
+            transition: all 200ms;
+
+        }
+    }
+}
+
+.storycontainer>.intersecting+.storycontainer>.snap {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.notmounted {
+    a {
+        box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.7);
+        transition: box-shadow 200ms;
+    }
+}
+
+.notintersecting {
+    transform: scale(1);
+    transition: all 250ms;
+
+    a {
+        box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.7);
+        transition: box-shadow 200ms;
+    }
+}
+
+.observable {
+    transform: translate(-50%, 0);
+    left: 50%;
+    position: absolute;
+    bottom: -80px;
+    width: calc(100vw - 100px);
+    height: 10px;
+    z-index: 100000;
+}
+
+.storycontainer {
+    position: relative;
+    scroll-snap-align: center;
+}
+

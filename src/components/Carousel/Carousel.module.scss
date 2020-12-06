@@ -1,0 +1,135 @@
+@import '../../assets/scss/variables';
+
+.carouselcontainer {
+    transform: translateZ(0);
+}
+
+.scrollleft,
+.scrollright {
+    cursor: pointer;
+    border-radius: 50%;
+    top: 73px;
+    position: fixed;
+    z-index: 6;
+    padding: 10px;
+    background: white;
+    color: gray;
+    display: none;
+    box-shadow: 0 7px 15px rgba(0,0,0,.2);
+    border: 1px solid #dfe1e5;
+    visibility: visible;
+    opacity: 0.8;
+    transition: visibility 0.5s linear, opacity 0.5s linear, color 0.5s;
+
+    &:hover {
+        opacity: 1;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    i {
+        font-size: 30px;
+        vertical-align: sub;
+    }
+
+    @media (min-width: $layout-post-single-width) {
+        display: block;
+    }
+
+    &.invisible {
+        visibility: hidden;
+        opacity: 0 !important;
+    }
+}
+
+.scrollleft {
+    left: 10px;
+}
+
+.scrollright {
+    right: 10px;
+}
+
+.carousel {
+    scroll-behavior: smooth;
+    display: flex;
+    padding-top: 10px;
+    height: 100%;
+
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+    }
+
+    -webkit-overflow-scrolling: touch;
+
+    > div:first-child {
+        margin-left: 18px;
+    }
+}
+
+.story {
+    margin-left: 7px;
+    margin-right: 7px;
+
+    @media (min-width: 1px) and (max-width: 359px) {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    @media (min-width: 360px) and (max-width: 366px) {
+        margin-left: 5px;
+        margin-right: 6px;
+    }
+    @media (min-width: 367px) and (max-width: 374px) {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    @media (min-width: 375px) and (max-width: 400px) {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    @media (min-width: 400px) and (max-width: 410px) {
+        margin-left: 10px;
+        margin-right: 9px;
+    }
+    @media (min-width: 411px) and (max-width: 454px) {
+        margin-left: 3px;
+        margin-right: 6px;
+    }
+    @media (min-width: 455px) and (max-width: 467px) {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    @media (min-width: 468px) and (max-width: 479px) {
+        margin-left: 4px;
+        margin-right: 5px;
+    }
+    @media (min-width: 480px) and (max-width: 495px) {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    @media (min-width: 496px) and (max-width: 513px) {
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+    @media (min-width: 570px) and (max-width: 610px) {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    @media (min-width: 685px) and (max-width: 730px) {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    @media (min-width: 800px) and (max-width: 840px) {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    @media (min-width: 910px) and (max-width: 970px) {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

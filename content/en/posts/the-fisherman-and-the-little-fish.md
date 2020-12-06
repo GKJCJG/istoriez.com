@@ -1,0 +1,17 @@
+---
+title: The Fisherman and the Little Fish
+author: Aesop
+style: white
+age: 4-6
+tags:
+  - Animals
+  - Fables
+---
+
+A poor Fisherman, who lived on the fish he caught, had bad luck one day and caught nothing but a very small fry. The Fisherman was about to put it in his basket when the little Fish said:
+
+"Please spare me, Mr. Fisherman! I am so small it is not worth while to carry me home. When I am bigger, I shall make you a much better meal."
+
+But the Fisherman quickly put the fish into his basket.
+
+"How foolish I should be," he said, "to throw you back. However small you may be, you are better than nothing at all."

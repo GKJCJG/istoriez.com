@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables';
+
+.adsense {
+    text-align: center;
+    max-width: $layout-post-single-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ins {
+    height: calc(100vh - 150px);
+    display: block;
+}

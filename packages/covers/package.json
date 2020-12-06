@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "name": "istoriez",
+    "private": true,
+    "main": "n/a",
+    "scripts": {
+        "start": "node generate.js develop",
+        "covers": "node generate.js",
+        "all-covers": "node generate.js all"
+    },
+    "dependencies": {
+        "puppeteer": "3.3.0"
+    }
+}

@@ -1,0 +1,40 @@
+.facebook,
+.twitter,
+.mail {
+    background-size: cover;
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    margin-right: 15px;
+}
+
+.facebook {
+    background-image: url("https://ws.sharethis.com/images/2017/facebook_32.png");
+
+}
+
+.twitter {
+    background-image: url("https://ws.sharethis.com/images/2017/twitter_32.png");
+}
+
+.mail {
+    background-image: url("https://ws.sharethis.com/images/2017/email_32.png");
+}
+
+.shareicon {
+    float: right;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.actionlist {
+    li {
+        a {
+            display: flex;
+
+            div {
+                flex: 1;
+            }
+        }
+    }
+}

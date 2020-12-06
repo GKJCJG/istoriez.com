@@ -1,0 +1,57 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.infocontainer {
+    margin-bottom: 5px;
+
+    @media (min-width: $large-story-breakpoint) {
+        margin-bottom: 12px;
+        margin-top: 4px;
+    }
+}
+
+.starsandreads {
+    margin-top: 6px !important;
+
+    @media (min-width: $large-story-breakpoint) {
+        margin-top: 8px !important;
+    }
+}
+
+.info {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 1px;
+    font-size: 15px;
+
+    @media (min-width: $large-story-breakpoint) {
+        font-size: 16px;
+    }
+}
+
+.secondInfo {
+    color: gray;
+    line-height: 14px;
+    margin-bottom: 2px;
+    font-size: 15px;
+    margin-top: 2px;
+
+    @media (min-width: $large-story-breakpoint) {
+        font-size: 16px;
+    }
+}
+
+.ageInfo {
+    color: gray;
+    line-height: 14px;
+    margin-bottom: 2px;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+
+    @media (min-width: $large-story-breakpoint) {
+        font-size: 16px;
+    }
+}
+

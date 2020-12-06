@@ -1,0 +1,68 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.story {
+    position: relative;
+    border-radius: 8px;
+    width: $large-story-width;
+    height: $large-story-height;
+
+    .image {
+        border-radius: 8px;
+        width: $large-story-width !important;
+        height: $large-story-height !important;
+    }
+
+    .author {
+        color: white;
+    }
+
+    .author,
+    .authorblack {
+        position: absolute;
+        left: 5px;
+        font-weight: 300;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        line-height: 20px;
+        top: 4px
+    }
+
+    .authorblack {
+        color: black;
+    }
+
+    .titlewhite,
+    .titleblack {
+        position: absolute;
+        right: 7px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        bottom: 8px;
+        left: 7px;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 400 !important;
+    }
+
+    .titlewhite {
+        color: white;
+        font-weight: 400;
+    }
+
+    .titleblack {
+        color: black;
+        font-weight: 500;
+    }
+}
+
+.storycontainer {
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    max-width: $large-story-width;
+}

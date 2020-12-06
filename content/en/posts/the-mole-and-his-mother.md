@@ -1,0 +1,21 @@
+---
+title: The Mole and his Mother
+author: Aesop
+style: white
+age: 4-6
+tags:
+  - Animals
+  - Fables
+---
+
+A little Mole once said to his Mother:
+
+"Why, Mother, you said I was blind! But I am sure I can see!"
+
+Mother Mole saw she would have to get such conceit out of his head. So she put a bit of frankincense before him and asked him to tell what it was.
+
+The little Mole peered at it.
+
+"Why, that's a pebble!"
+
+"Well, my son, that proves you've lost your sense of smell as well as being blind."

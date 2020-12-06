@@ -1,0 +1,73 @@
+@import '../../assets/scss/variables';
+
+:global(body.dark) {
+    .audio {
+        background: #242424;
+        border-top: 1px solid #44475a;
+
+        .progressbar {
+            background: #44475a;
+        }
+    }
+}
+
+.audio {
+    padding: 20px 5px 20px 0px;
+    display: flex;
+    align-items: center;
+    z-index: 11;
+    border-top: 1px solid lightgray;
+    position: fixed;
+    background: white;
+    bottom: 57px;
+
+    @media (min-width: $layout-post-single-width) {
+        bottom: 0px;
+    }
+
+    left: 0;
+    height: 50px;
+    width: 100vw;
+
+    .cover {
+        width: 43px;
+        padding-right: 5px;
+    }
+
+    .playpause,
+    .close,
+    .replay {
+        cursor: pointer;
+        flex: 0 0 auto;
+    }
+
+    .playpause {
+        padding-left: 10px;
+    }
+
+    .close {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .replay {
+        padding-right: 10px;
+        padding-left: 15px;
+    }
+    
+    .progressbar {
+        height: 1px;
+        background-color: lightgray;
+        flex: 1 1 auto;
+        margin: 10px 20px 10px 10px;
+    
+        .progress {
+            background-color: #2196f3;
+            height: 1px;
+        }
+    }
+
+    .duration {
+        flex: 0 0 auto;
+    }
+}

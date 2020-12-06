@@ -1,0 +1,101 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.story {
+    position: relative;
+    border-radius: 8px;
+    width: $small-story-width;
+    height: $small-story-height;
+
+    @media (min-width: $large-story-breakpoint) {
+        width: $large-story-width;
+        height: $large-story-height;
+    }
+
+    .image {
+        width: $small-story-width !important;
+        height: $small-story-height !important;
+
+        @media (min-width: $large-story-breakpoint) {
+            width: $large-story-width !important;
+            height: $large-story-height !important;
+        }
+    }
+}
+
+.storyborder {
+    @media (min-width: $large-story-breakpoint) {
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14),
+            0 3px 5px 0 rgba(0, 0, 0, 0.12),
+            0 3px 3px -2px rgba(0, 0, 0, 0.2);
+    }
+
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 1px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.storycontainer {
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: $small-story-width;
+
+    @media (min-width: $large-story-breakpoint) {
+        max-width: $large-story-width;
+    }
+}
+
+.storyplaceholder {
+    position: absolute;
+    left: 0 !important;
+    top: 0;
+}
+
+.emptycontainer {
+    border-radius: 8px;
+    width: $small-story-width;
+    height: $small-story-height;
+
+    @media (min-width: $large-story-breakpoint) {
+        width: $large-story-width;
+        height: $large-story-height;
+    }
+
+    border: 1px solid $color-gray;
+    opacity: 0.3;
+}
+
+.placeholderimg {
+    border-radius: 8px;
+    border: 1px solid #d6d6d6;
+    
+}
+
+.audio {
+    position: absolute;
+    background: rgb(33, 150, 243) !important;
+    border-radius: 50%;
+    top: -5px;
+    right: 16px;
+    color: white !important;
+    padding: 5px;
+    font-size: 15px !important;
+
+    @media (min-width: $large-story-breakpoint) {
+        right: 22px;
+        font-size: 22px !important;
+    }
+}
+
+.favorite {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    bottom: 5px;
+    right: 5px;
+    color: white !important;
+    padding: 7px;
+    font-size: 12px !important;
+}

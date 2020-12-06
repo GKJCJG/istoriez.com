@@ -1,0 +1,236 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.story,
+.starandsharecontainer,
+.introbox,
+.introcontainer,
+.buttonscontainer,
+.infocontainer {
+    max-width: $layout-post-single-width;
+}
+
+.infocontainer {
+    margin: 0 auto;
+}
+
+:global(body.dark) {
+    .story {
+        color: lightgray;
+        letter-spacing: 1px;
+    }
+}
+
+.story {
+    letter-spacing: 0.2px;
+    position: relative;
+    z-index: 2;
+    padding: 15px 18px 15px;
+    margin: 0 auto;
+
+    div {
+        &>p:first-child {
+            &:first-letter {
+                float: left;
+                font-size: 50px;
+                line-height: 40px;
+                padding: 5px 6px 0 0;
+
+                @media (min-width: 600px) {
+                    font-size: 60px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+    p {
+        @media (min-width: $layout-post-single-width) {
+            padding: 0 20px;
+        }
+
+        font-family: Georgia,
+        Times New Roman,
+        Times,
+        serif !important;
+        font-size: 18px;
+        line-height: 1.4;
+        text-align: justify;
+        margin-bottom: 1.625rem;
+
+        @media (min-width: 600px) {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    }
+}
+
+.blue {
+    color: #2196f3 !important;
+}
+
+.coverandstars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+
+    img {
+        height: 100px;
+        margin-right: 10px;
+    }
+}
+
+@include breakpoint-sm {
+    .story {
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .coverandstars {
+        img {
+            margin-right: 20px;
+        }
+    }
+}
+
+:global(body.dark) {
+    .starcontainer {
+        color: #909090;
+    }
+}
+
+.starcontainer {
+    max-width: $layout-post-single-width;
+    color: #757575;
+    text-align: center;
+    margin-top: auto;
+
+    i {
+        vertical-align: middle;
+        font-size: 22px;
+    }
+
+    .number {
+        font-size: 17px;
+        font-weight: 600;
+        vertical-align: middle;
+    }
+
+    @media (min-width: $large-story-breakpoint) {
+        font-size: 16px;
+    }
+}
+
+.starandsharecontainer {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 26px 25px 26px;
+
+    @media (min-width: $large-story-breakpoint) {
+        padding-top: 25px;
+        padding-bottom: 40px;
+    }
+
+    font-size: 13px;
+}
+
+.introbox {
+    display: flex;
+    padding: 15px 22px 15px 0px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: $layout-post-single-width) {
+        padding-top: 60px;
+        padding-left: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        margin-top: 20px;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+    @media (max-width: $large-story-breakpoint) {
+        width: 158px !important;
+        height: 158px !important;
+    }
+}
+
+.introcontainer {
+    width: 100%;
+    position: relative;
+    word-break: break-word;
+
+    h1 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.2;
+
+        @media (min-width: 500px) {
+            max-width: 600px;
+        }
+    }
+
+    .author,
+    .narrator {
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #0B78D0;
+    }
+
+    .author {
+        margin-top: 7px;
+    }
+
+    .narrator {
+        margin-top: 5px;
+    }
+}
+
+.buttonscontainer {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 10px 18px 0 18px;
+    margin: auto;
+
+    @media (min-width: $layout-post-single-width) {
+        padding: 10px 30px 0 30px;
+    }
+
+    i {
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+@include breakpoint-md {
+    .introcontainer {
+        h1 {
+            font-size: 40px;
+            line-height: 1;
+            font-weight: unset;
+        }
+
+        .author {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+    }
+}

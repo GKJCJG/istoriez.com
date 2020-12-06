@@ -1,0 +1,46 @@
+@import '../../assets/scss/variables';
+
+.storycontainer {
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: $small-story-width;
+
+    @media (min-width: $large-story-breakpoint) {
+        max-width: $large-story-width;
+    }
+}
+
+.emptycontainer {
+    width: $small-story-width;
+    height: $small-story-height;
+
+    @media (min-width: $large-story-breakpoint) {
+        width: $large-story-width;
+        height: $large-story-height;
+    }
+
+    border: 1px solid $color-gray;
+    border-radius: 8px;
+    opacity: 0.3;
+}
+
+.info,
+.secondInfo {
+    font-size: 15px;
+
+    @media (min-width: $large-story-breakpoint) {
+        font-size: 16px;
+    }
+}
+
+.info {
+    margin-top: 1px;
+
+}
+
+.secondInfo {
+    line-height: 14px;
+    margin: 2px 0;
+}

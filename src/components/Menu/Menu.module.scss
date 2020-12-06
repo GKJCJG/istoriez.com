@@ -1,0 +1,32 @@
+.android {
+    width: 170px;
+    margin-left: auto;
+}
+
+.menu {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+:global(body.dark) {
+    .menu {
+        hr {
+            border-color: #44475a;
+        }
+    }
+}
+
+.iconcontainer {
+    height: 24px;
+    padding-right: 32px;
+}
+
+.listitem {
+    align-items: center;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 48px;
+}

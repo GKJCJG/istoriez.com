@@ -1,0 +1,36 @@
+.votingstar,
+.resultstar {
+    font-size: 35px;
+    padding: 0 4px;
+}
+
+.votingstar {
+    text-shadow: 0 0 2px #000;
+    color: #fff;
+    cursor: pointer;
+
+    &.hover {
+        color: gold !important;
+    }
+}
+
+:global(body.dark) {
+    .votingstar {
+        text-shadow: 0 0 2px #fff;
+        color: #121212;
+    }
+}
+
+.resultstar {
+    color: gold;
+}
+
+.yourgrade {
+    color: #757575;
+    margin-bottom: 5px;
+}
+
+.votingcontainer {
+    text-align: center;
+    margin-bottom: 20px;
+}

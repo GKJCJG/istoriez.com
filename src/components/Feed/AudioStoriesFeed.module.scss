@@ -1,0 +1,58 @@
+@import '../../assets/scss/variables';
+
+.audiostoriesfeed {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.resultItem {
+    display: flex;
+    cursor: pointer;
+
+    .image {
+        flex: 0 0 0;
+        padding: 9px 15px;
+    }
+
+    .info {
+        flex: 1;
+
+        .infochild {
+            padding-top: 10px;
+            padding-right: 15px;
+
+            .title {
+                font-size: 19px;
+                line-height: 1.2;
+            }
+
+            .author {
+                color: #808080;
+            }
+        }
+    }
+}
+
+.story {
+    max-width: 50px;
+
+    :global(.emptycontainer) {
+        width: 50px !important;
+        height: 65px !important;
+        border-radius: 2px !important;
+    }
+
+    :global(.story) {
+        width: 50px !important;
+        height: 65px !important;
+        border-radius: 2px !important;
+    }
+
+    img:first-of-type {
+        width: 50px !important;
+        height: 65px !important;
+        border-radius: 1px !important;
+    }
+}

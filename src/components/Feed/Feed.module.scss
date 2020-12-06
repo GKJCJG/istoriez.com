@@ -1,0 +1,152 @@
+@import '../../assets/scss/variables';
+
+.chipscontainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 18px;
+
+    @media (min-width: $layout-post-single-width) {
+        padding: 0 100px;
+    }
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 20px 3px 0 3px;
+    grid-gap: 7px;
+    box-sizing: border-box;
+
+    @media (max-width: $large-story-breakpoint+1px) {
+        grid-template-columns: repeat(auto-fit, minmax($small-story-width+(-10px), 1fr));
+
+        :global(.infostorycontainer) {
+            max-width: 100px;
+        }
+    }
+    
+    @media (min-width: $large-story-breakpoint) {
+        grid-template-columns: repeat(auto-fit, minmax($small-story-width+15px, 1fr));
+
+        :global(.infostorycontainer) {
+            max-width: 118px;
+        }
+    }
+
+    @media (max-width: $layout-post-single-width) {
+        .story {
+            padding-bottom: 10px;
+            max-width: unset;
+                
+            :global(.edgecoverstoryimage) {
+                width: unset !important;
+                height: unset !important;
+            }
+    
+            :global(.emptycontainer) {
+                width: 50px !important;
+                height: 50px !important;
+            }
+        
+            :global(.story) {
+                width:unset;
+                height: unset;
+            }
+        }
+    }
+
+    @media (min-width: $layout-post-single-width) {
+        padding-top: 50px;
+
+        grid-template-columns: repeat(auto-fit, minmax($large-story-width+15px, 1fr));
+    }
+}
+
+.listgrid {
+    padding-top: 20px;
+    display: grid;
+    align-items: left;
+    justify-items: left;
+
+    grid-template-columns: repeat(auto-fill, 12fr);
+
+    @media (min-width: 500px) {
+        grid-template-columns: repeat(auto-fill, minmax(380px, 6fr));
+    }
+}
+
+.listbuttonscontainer {
+    max-width: $layout-post-single-width;
+    margin: 0 auto;
+    position: relative;
+}
+
+.listbutton {
+    margin: auto 0;
+    position: absolute;
+    top: -55px;
+    right: 15px;
+    cursor: pointer;
+
+    @media (min-width: $layout-post-single-width) {
+        top: 20px;
+        z-index: 1000;
+    }
+}
+
+.button {
+    padding: 12px;
+}
+
+.feed {
+    h2 {
+        padding: 0 18px;
+    }
+}
+
+.resultItem {
+    display: flex;
+    justify-items: left;
+
+    .image {
+        flex: 0;
+        padding: 0px 15px 0px 15px;
+    }
+
+    .info {
+        flex: 1;
+        padding: 0 18px 18px 0px;
+        text-align: justify;
+        position: relative;
+        line-height: 1.4;
+
+        .readlink {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin-top: 20px;
+        }
+    }
+}
+
+.h1 {
+    padding: 20px 18px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    font-size: 23px;
+    text-align: center;
+    line-height: 35px;
+    max-width: 930px;
+
+    @media (min-width: $large-story-breakpoint) {
+        font-size: 28px;
+        font-weight: unset;
+    }
+}
+
+.story {
+    padding-bottom: 10px;
+}

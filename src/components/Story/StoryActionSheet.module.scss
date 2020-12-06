@@ -1,0 +1,105 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.more {
+    position: absolute;
+    z-index: 2;
+    color: white !important;
+    right: -3PX;
+    top: 2PX;
+    cursor: pointer;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+
+    @media (min-width: $large-story-breakpoint) {
+        top: 4px;
+        font-size: 30px !important;
+    }
+}
+
+.actionbuttons {
+    .listenbuttoncontainer {
+        padding: 0px 25px 12px 25px;
+        width: 100%;
+    }
+
+    a {
+        padding: 12px 25px;
+    }
+
+    i {
+        vertical-align: text-top;
+    }
+
+    @media (min-width: 430px) {
+        display: flex;
+
+        &>* {
+            flex: 1 1 0;
+        }
+
+        .listenbuttoncontainer {
+            padding: 12px 25px 12px 12px;
+        }
+
+        a {
+            padding: 12px 12px 12px 25px !important;
+        }
+    }
+
+    &:hover {
+        background: initial !important;
+    }
+}
+
+.heart {
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.redheart {
+    color: #f55 !important;
+}
+
+.top {
+    display: flex;
+    padding: 20px 25px;
+    border-bottom: 1px solid lightgray;
+
+    .topimg {
+        width: 55px;
+        height: 72px;
+    }
+
+    .toptext {
+        padding-left: 18px;
+        max-width: $layout-width;
+        width: 100%;
+        position: relative;
+        word-break: break-word;
+    
+        h1 {
+            margin: 0;
+            font-size: 25px;
+            line-height: 1;
+    
+            @media (min-width: $large-story-breakpoint) {
+                font-size: 30px;
+                line-height: 1.2;
+            }
+        }
+    
+        .author {
+            margin-top: 7px;
+            font-size: 18px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+:global(body.dark) {
+    .top {
+        border-bottom: 1px solid #44475a;
+    }
+}
+

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.istoriez.com/sv/sitemap.xml
+Sitemap: https://www.istoriez.com/sitemap.xml

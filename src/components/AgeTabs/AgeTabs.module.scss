@@ -1,0 +1,63 @@
+@import '../../assets/scss/variables';
+
+.agetabs {
+    display: flex;
+    padding-top: 10px;
+    border-bottom: 1px solid #d3d3d3;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    justify-content: space-evenly;
+    margin: 10px 0;
+
+    @media (min-width: $large-story-breakpoint) {
+        margin-top: 11px;
+    }
+
+    .tab {
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px;
+        text-align: center;
+        color: gray;
+    }
+
+    .activetab {
+        color: #2196f3 !important;
+        border-bottom: 2px solid #2196f3 !important;
+    }
+}
+
+
+
+.clickingtab {
+    position: relative;
+
+    &::after {
+        background-color: rgba(0, 0, 0, 0.15);
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 160%;
+        top: 0;
+        left: -30%;
+        border-radius: 25px/70px;
+    }
+}
+
+:global(body.dark) {
+    .agetabs {
+        border-bottom: 1px solid rgb(68, 71, 90);
+
+        .tab {
+            color: #f8f8f2;
+        }
+    }
+
+    .clickingtab {
+        &::after {
+            background-color: rgba(33, 150, 243, 0.3);
+        }
+    }
+}

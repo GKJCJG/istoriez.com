@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables';
+
+.linktitle>div {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.container {
+    @media (min-width: $layout-post-single-width) {
+        margin-top: 20px;
+    }
+}
+

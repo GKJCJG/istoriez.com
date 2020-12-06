@@ -1,0 +1,17 @@
+@import '../../assets/scss/variables';
+
+.page {
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 2;
+
+    p {
+        line-height: 1.4;
+    }
+}
+
+.limitedwidth {
+    max-width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+}

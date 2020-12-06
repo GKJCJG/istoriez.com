@@ -1,0 +1,12 @@
+.chiplist {
+    padding-top: 10px;
+    padding-bottom: 3px;
+
+    .chip {
+        border: 1px solid lightgray;
+        cursor: pointer;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+}

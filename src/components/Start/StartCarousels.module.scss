@@ -1,0 +1,9 @@
+@import '../../assets/scss/variables';
+
+.carousel {
+    height: 240px;
+
+    @media (min-width: $large-story-breakpoint) {
+        height: 285px;
+    }
+}

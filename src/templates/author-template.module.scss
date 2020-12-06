@@ -1,0 +1,9 @@
+@import '../assets/scss/variables';
+
+.description {
+    margin: 0 20px 20px 18px;
+
+    @media (min-width: $layout-post-single-width) {
+        margin-bottom: 35px;
+    }
+}

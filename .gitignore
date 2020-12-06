@@ -1,0 +1,7 @@
+node_modules/
+.cache/
+public/
+publics/
+npm-debug.log
+.eslintcache
+google-api.json

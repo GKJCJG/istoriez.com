@@ -1,0 +1,19 @@
+@import '../../assets/scss/variables';
+
+.grid,
+.listgrid {
+    padding-top: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.grid {
+    @media (min-width: $large-story-breakpoint) {
+        grid-template-columns: repeat(auto-fit, minmax($large-story-width+40px, 1fr));
+    }
+}
+
+.story {
+    padding: 10px;
+}

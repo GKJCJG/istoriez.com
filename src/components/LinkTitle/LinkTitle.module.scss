@@ -1,0 +1,32 @@
+@import '../../assets/scss/variables';
+
+.title {
+    position: relative;
+}
+
+.header {
+    padding: 20px 0px 10px 18px !important;
+    margin: 0;
+    max-width: calc(100vw - 66px);
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 32px;
+
+    @media (min-width: $large-story-breakpoint) {
+        font-size: 24px;
+    }
+
+    @media (min-width: $layout-post-single-width) {
+        font-weight: unset;
+    }
+}
+
+.forwardarrow {
+    position: absolute;
+    top: 42%;
+    right: 20px;
+    color: #2196f3;
+}

@@ -1,0 +1,139 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.layout {
+    position: relative;
+
+    a,
+    a:hover,
+    a:click,
+    a:visited {
+        border: none;
+        outline: none;
+        text-decoration: none;
+        color: inherit;
+        -webkit-tap-highlight-color: white;
+    }
+}
+
+.textsettings {
+    @media (min-width: $layout-post-single-width) {
+        margin-right: 20px !important;
+    }
+}
+
+.settings {
+    flex: 0 0 auto;
+
+}
+
+.searchsection {
+    margin-top: 10px;
+}
+
+.searchbox {
+    width: 100%;
+    max-width: $layout-post-single-width;
+    margin: 10px 0;
+    border-radius: 7px;
+    display: flex;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 0px 4px 0 rgba(0, 0, 0, 0.12), 0 1px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+:global(body.dark) {
+    .searchbox {
+        background: #242424;
+    }
+}
+
+.searchline {
+    width: 100%;
+    margin: auto 10px;
+    flex: 1 1 auto;
+    font-size: 18px;
+    color: #8C8C8C;
+    padding: 10px 0;
+
+}
+
+.searchicon {
+    color: #8C8C8C;
+
+    margin: auto 10px;
+    line-height: 1;
+    flex: 0 0 auto;
+
+}
+
+@include breakpoint-sm {
+    .appbarrow {
+        height: 56px;
+    }
+}
+
+.snackbar {
+    font-size: 16px !important;
+    height: 48px !important;
+}
+
+.actionitem {
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    fill: currentColor;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mainappbar,
+.backarrow {
+    @media (min-width: $layout-post-single-width) {
+        display: none !important;
+    }
+}
+
+.appbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $layout-post-single-width;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.section {
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+    padding: 8px 12px;
+}
+
+.sectionalignstart {
+    justify-content: flex-start;
+    order: -1;
+}
+
+.sectionalignend {
+    justify-content: flex-end;
+    order: 1;
+}
+
+.appbarrow {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+}

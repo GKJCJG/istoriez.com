@@ -1,0 +1,119 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+:global(body.dark) {
+    .topbox {
+        background: #242424;
+        border-bottom: 1px solid #44475a;
+    }
+}
+
+.topbox {
+    border-bottom: 1px solid lightgray;
+}
+
+.search {
+    max-width: $layout-post-single-width;
+    margin: auto;
+    padding: 0 0 100px 0;
+
+    .topbox {
+        display: flex;
+        padding-top: 9px;
+
+        .back {
+            flex: 0 0 0;
+            padding-left: 20px;
+        }
+
+        input[type=text] {
+            flex: 1;
+            padding: 16px 16px 16px 12px;
+            background: transparent;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            color: gray;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+
+        .clear {
+            flex: 0 0 0;
+            padding-right: 20px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.actionitem {
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: auto;
+}
+
+.searchwritten {
+    input[type=text] {
+        color: inherit !important;
+    }
+}
+
+.resultItem {
+    display: flex;
+
+    .image {
+        flex: 0 0 0;
+        padding: 9px 15px;
+    }
+
+    .info {
+        flex: 1;
+
+        .infochild {
+            padding-top: 10px;
+            padding-right: 15px;
+
+            .title {
+                font-size: 19px;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+.categoryicon {
+    i {
+        width: 50px;
+        font-size: 50px;
+        vertical-align: middle;
+    }
+
+    text-align: center;
+}
+
+.story {
+    max-width: 50px;
+
+    :global(.emptycontainer) {
+        width: 50px !important;
+        height: 65px !important;
+    }
+
+    a:first-of-type {
+        width: 50px !important;
+        height: 65px !important;
+        border-radius: 3px !important;
+    }
+
+    img:first-of-type {
+        width: 50px !important;
+        height: 65px !important;
+    }
+}
