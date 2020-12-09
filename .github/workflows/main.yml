@@ -7,7 +7,11 @@ jobs:
     name: Request Netlify Webhook
     runs-on: ubuntu-latest
     steps:
-      - name: Curl request
+      - name: Curl request for main
         env:
-          BUILD_HOOK: ${{ secrets.BUILD_HOOK }}
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/$BUILD_HOOK
+          MAIN: ${{ secrets.MAIN }}
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/$MAIN
+      - name: Curl request for pwa
+        env:
+          PWA: ${{ secrets.PWA }}
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/$PWA
