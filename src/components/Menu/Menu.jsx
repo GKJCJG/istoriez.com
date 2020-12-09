@@ -39,7 +39,9 @@ const Menu = () => {
                 <Row to={slugs.privacyPolicy} icon="info" text={strings.privacyPolicy} />
                 <Row to={slugs.copyright} icon="copyright" text={strings.copyright} />
                 <Row to={slugs.feedback} icon="feedback" text={strings.sendFeedback} />
-                <Row to={slugs.donate} icon="attach_money" text={strings.donate} />
+                {!process.env.GATSBY_PWA &&
+                    <Row to={slugs.donate} icon="attach_money" text={strings.donate} />
+                }
                 <hr />
                 {!process.env.GATSBY_PWA &&
                     <>
