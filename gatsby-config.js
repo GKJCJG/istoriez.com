@@ -92,37 +92,6 @@ const plugins = [
         },
     },
     {
-        resolve: 'gatsby-plugin-sitemap',
-        options: {
-            query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage(
-              filter: {
-                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/|/cookies/|/pages/|/images/)/" }
-              }
-            ) {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-          }
-        `,
-            output: '/sitemap.xml',
-            serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
-                url: `https://www.istoriez.com${edge.node.path}`,
-                changefreq: 'daily',
-                priority: 0.7
-            }))
-        }
-    },
-    {
         resolve: 'gatsby-plugin-manifest',
         options: {
             name: strings.title,
@@ -131,7 +100,8 @@ const plugins = [
             background_color: '#FFF',
             theme_color: '#FFF',
             display: 'standalone',
-            icon: 'static/media/istoriez.png'
+            icon: 'static/media/istoriez.png',
+            cache_busting_mode: process.env.GATSBY_PWA ? 'none' : 'query'
         },
     },
     'gatsby-plugin-catch-links',
@@ -145,6 +115,7 @@ const plugins = [
             }
         }
     },
+    `gatsby-plugin-offline`,
     {
         resolve: 'gatsby-plugin-react-svg',
         options: {

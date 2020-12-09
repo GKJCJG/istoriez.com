@@ -22,14 +22,14 @@ const Contact = () => {
     return (
         <ul className={styles.list}>
             <li>
-                <button onClick={() => avoidJsRoutes("https://www.istoriez.com/", "en")}>
+                <button onClick={() => avoidJsRoutes("https://pwa.istoriez.com/", "en")}>
                     <div className="md-ink-container">
                     </div>
                     {strings.english}
                 </button>
             </li>
             <li>
-                <button onClick={() => avoidJsRoutes("https://www.istoriez.com/sv/", "sv")}>
+                <button onClick={() => avoidJsRoutes("https://pwa.istoriez.com/sv/", "sv")}>
                     <div className="md-ink-container">
                     </div>
                     {strings.swedish}

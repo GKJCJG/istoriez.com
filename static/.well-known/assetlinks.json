@@ -1,0 +1,11 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.istoriez.twa",
+        "sha256_cert_fingerprints": [
+            "5D:75:A4:D6:C4:4D:03:D9:52:E1:37:E4:34:31:5B:DA:EF:26:9E:49:30:01:19:A3:08:6E:C1:19:C8:AF:DE:6F",
+            "13:2F:08:FA:79:54:4A:61:AC:54:D7:AF:B9:75:F8:69:3B:02:CD:44:0B:D4:75:DD:8D:2E:71:E0:B4:7B:DA:C9"
+        ]
+    }
+}]
