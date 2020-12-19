@@ -27,7 +27,7 @@ const Stars = ({ path }) => {
 
     return (
         <div className={styles.votingcontainer}>
-            <div className={styles.yourgrade}>{strings.yourGrade}</div>
+            <div className={styles.yourgrade}>{vote ? strings.yourGrade : strings.rateTheStory}</div>
             {is ?
                 <Results count={vote} />
                 :
