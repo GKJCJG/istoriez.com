@@ -42,7 +42,7 @@ const LibraryTemplate = () => {
                     favoritesPaths.map(path => <InfoStory key={path} className={styles.story} path={path} />)}
             </Carousel>
             <LinkTitle title={strings.recentlyRead} />
-            <Carousel>
+            <Carousel className={styles.minheight}>
                 {recentlyReads.length === 0 ?
                     <EmptyMessage mounted={mounted}>{strings.noReads}</EmptyMessage> :
                     recentlyReads.map(recent => <InfoStory key={recent.path} path={recent.path} className={styles.story}>{latestReadsTimeAgo(recent.date)}</InfoStory>)}
